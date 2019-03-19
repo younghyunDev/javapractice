@@ -1,8 +1,8 @@
 
 public class Tiger extends Feline {
 
-	public Tiger(String argPict, String argFood, int argHunger, float argBoundaries) {
-		super(argPict, argFood, argHunger, argBoundaries);
+	public Tiger(String argPict, String argFood, int argHunger, String argBoundaries,String argLocation) {
+		super(argPict, argFood, argHunger, argBoundaries,argLocation);
 		// TODO Auto-generated constructor stub
 	}
 	public void makeNoise() {

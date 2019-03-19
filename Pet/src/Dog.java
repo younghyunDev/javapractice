@@ -1,8 +1,8 @@
 
 public class Dog extends Canine{
 
-	public Dog(String argPict, String argFood, int argHunger, float argBoundaries) {
-		super(argPict, argFood, argHunger, argBoundaries);
+	public Dog(String argPict, String argFood, int argHunger, String argBoundaries, String argLocation) {
+		super(argPict, argFood, argHunger, argBoundaries,argLocation);
 		// TODO Auto-generated constructor stub
 	}
 	public void makeNoise() {

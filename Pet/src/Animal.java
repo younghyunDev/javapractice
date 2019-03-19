@@ -4,13 +4,15 @@ public class Animal {
 	String picture = "file name";
 	String food ="meat or grass";
 	int hunger =0;
-	float boundaries=0;
+	String boundaries="0";
+	String location="(0,0)";
 	
-	public Animal(String argPict, String argFood, int argHunger, float argBoundaries ) {
+	public Animal(String argPict, String argFood, int argHunger, String argBoundaries, String argLocation ) {
 		picture=argPict;
 		food=argFood;
 		hunger=argHunger;
 		boundaries=argBoundaries;
+		location = argLocation;
 	}
 	
 	public void makeNoise() {

@@ -1,7 +1,7 @@
 
 public class Feline extends Animal{
-	public Feline(String argPict, String argFood, int argHunger, float argBoundaries) {
-		super(argPict, argFood, argHunger, argBoundaries);
+	public Feline(String argPict, String argFood, int argHunger, String argBoundaries,String argLocation) {
+		super(argPict, argFood, argHunger, argBoundaries,argLocation);
 		// TODO Auto-generated constructor stub
 	}
 
