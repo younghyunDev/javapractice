@@ -14,7 +14,7 @@ public class Launcher {
 		for(int i=0;i<6;i++) {
 			System.out.println("-----------------"+animals[i].picture+" Variables-----------------");
 			System.out.println(animals[i].picture + " pciture : "+animals[i].picture);
-			System.out.println(animals[i].picture +" food : "+animals[i].food);
+			System.out.println(animals[i].picture +" foodd : "+animals[i].food);
 			System.out.println(animals[i].picture + "hunger : "+animals[i].hunger);
 			System.out.println(animals[i].picture +" boundaries : "+animals[i].boundaries);
 			System.out.println(animals[i].picture +" Location : "+animals[i].location);
