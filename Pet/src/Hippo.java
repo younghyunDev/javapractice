@@ -4,6 +4,7 @@ public class Hippo extends Animal {
 		super(argPict, argFood, argHunger, argBoundaries,argLocation);
 		// TODO Auto-generated constructor stub
 	}
+	
 	public void makeNoise() {
 		System.out.println("hippo crying");
 	}
