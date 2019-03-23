@@ -11,7 +11,7 @@ Module | Function
 numpy | matrix calculation (using in deep-learning)
 pandas | data preprocessing
 scikit learn | lots of machinelearning(linear regression, SVM, logstic regression...)
-matplotlib | data visualization
+matplotlib | datad visualization
 scipy | scientic calculation
 
 
