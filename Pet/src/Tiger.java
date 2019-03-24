@@ -6,7 +6,7 @@ public class Tiger extends Feline {
 		// TODO Auto-generated constructor stub
 	}
 	public void makeNoise() {
-		System.out.println("Tiger crying ¾îÈï~");
+		System.out.println("Tiger crying ~");
 	}
 	public void eat() {
 		System.out.println("Tiger eating meat");

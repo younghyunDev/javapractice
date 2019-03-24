@@ -5,10 +5,12 @@ public class Cat extends Feline{
 		super(argPict, argFood, argHunger, argBoundaries,argLocation);
 		// TODO Auto-generated constructor stub
 	}
+	
 	public void makeNoise() {
-		System.out.println("meow(cat crying)");
+		System.out.println("야옹~~");
 	}
-	public void eat() {
-		System.out.println("cat eating fish");
+	public void eat() {	
+		System.out.println("eat fish");
 	}
+	
 }
