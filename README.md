@@ -128,7 +128,7 @@ plt.plot(raw_X,y, 'o', alpha=0.5)
 
 
 
-![png](output_10_1.png)
+![pg](output_10_1.png)
 
 
 
