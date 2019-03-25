@@ -3,7 +3,7 @@
 
 I would explain about simple Linear Regression using python module, *Scikit-learn*
 We would use many modules to data analysis.
-![alt txt](https://i.ytimg.com/vi/erfZsVZbGJI/maxresdefault.jpg)
+![python](https://i.ytimg.com/vi/erfZsVZbGJI/maxresdefault.jpg)
 
 
 Module | Function
