@@ -6,7 +6,7 @@ We would use many modules to data analysis.
 ![python](https://i.ytimg.com/vi/erfZsVZbGJI/maxresdefault.jpg)
 
 
-Module | Function
+<center>Module</center> | Function
 --------|--------
 numpy | matrix calculation (using in deep-learning)
 pandas | data preprocessing
