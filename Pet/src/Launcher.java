@@ -31,10 +31,11 @@ public class Launcher {
 		*/
 
 		Animal dog =new Dog();
+		Animal cat =new Cat();
 		dog.setFood("meat");
-		dog=new Cat();
-		dog.setFood("fish");
-		dog.getFood();
+		cat.setFood("fish");
+		(Dog)dog.getFood();
+		cat.getFood();
 		
 
 		

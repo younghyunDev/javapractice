@@ -1,5 +1,5 @@
 
-/*public class VetLauncher {
+public class VetLauncher {
 	public static void main(String[] args) {
 	
 		PetOwner owner = new PetOwner();
@@ -9,4 +9,3 @@
 		
 	}
 }
-*/
