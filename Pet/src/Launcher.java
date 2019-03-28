@@ -2,7 +2,7 @@
 public class Launcher {
 	public static void main(String[] args) {
 		Animal[] animals =new Animal[10];
-		
+		/*
 		animals[0]=new Dog("dog","meat",60,"350*200","(354,123)");
 		animals[1]=new Wolf("Wolf","meat",80,"650*400","(843,623)");
 		animals[2]=new Hippo("Hippo","grass",30,"550*300","(534,923)");
@@ -20,6 +20,7 @@ public class Launcher {
 			System.out.println(animals[i].picture +" Location : "+animals[i].location);
 		}
 		
+		
 		for(int i=0;i<6;i++) {
 		System.out.println("--------------------"+animals[i].picture+" behavior--------------------");
 		animals[i].makeNoise();
@@ -27,7 +28,15 @@ public class Launcher {
 		animals[i].eat();
 		animals[i].sleep();
 		}
+		*/
+
+		Animal dog =new Dog();
+		dog.setFood("meat");
+		dog=new Cat();
+		dog.setFood("fish");
+		dog.getFood();
 		
+
 		
 		
 	}
