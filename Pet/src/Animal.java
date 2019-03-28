@@ -2,7 +2,7 @@
 public class Animal {
 
 	String picture = "file name";
-	String food ="meat or grass";
+	private String food ="meat or grass";
 	int hunger =0;
 	String boundaries="0";
 	String location="(0,0)";
@@ -26,5 +26,17 @@ public class Animal {
 	}
 	public void roam() {
 		System.out.println("wandering around waiting to bump into a food source or a boundary");
-	}	
+	}
+
+
+	public String getFood() {
+		return food;
+	}
+
+	
+	public void setFood(String food) {
+		this.food = food;
+	}
+
+
 }

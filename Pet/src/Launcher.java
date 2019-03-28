@@ -14,7 +14,7 @@ public class Launcher {
 		for(int i=0;i<6;i++) {
 			System.out.println("-----------------"+animals[i].picture+" Variables-----------------");
 			System.out.println(animals[i].picture + " pciture : "+animals[i].picture);
-			System.out.println(animals[i].picture +" food : "+animals[i].food);
+			System.out.println(animals[i].picture +" food : "+animals[i].getFood());
 			System.out.println(animals[i].picture + "hunger : "+animals[i].hunger);
 			System.out.println(animals[i].picture +" boundaries : "+animals[i].boundaries);
 			System.out.println(animals[i].picture +" Location : "+animals[i].location);
@@ -27,7 +27,15 @@ public class Launcher {
 		animals[i].eat();
 		animals[i].sleep();
 		}
+		System.out.println("#################### 상속받은 곳에 있는지 확인하기#####################");
+		animals[1].setFood("meat");
+		animals[2].setFood("fish");
+		System.out.println(animals[1].getFood());
+		System.out.println(animals[2].getFood());
 		
+
+		
+
 		
 		System.out.println("###########################Pet and Robot###############################");
 		
