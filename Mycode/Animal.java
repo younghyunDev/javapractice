@@ -1,4 +1,5 @@
 
+package Mycode;
 
 
 public class Animal {
