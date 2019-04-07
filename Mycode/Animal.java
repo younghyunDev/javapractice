@@ -2,14 +2,15 @@
 package Mycode;
 
 
-public class Animal {
-
+public abstract class Animal {
+	int intimacyLevel=1;
+	int exp=0;
 	String picture = "file name";
 	private String food ="meat or grass";
 	int hunger =0;
 	String boundaries="0";
 	String location="(0,0)";
-	
+	public Animal(){};
 	public Animal(String argPict, String argFood, int argHunger, String argBoundaries, String argLocation ) {
 		picture=argPict;
 		food=argFood;
@@ -18,9 +19,7 @@ public class Animal {
 		location = argLocation;
 	}
 	
-	public void makeNoise() {
-		System.out.println("make noise");
-	}
+	abstract public void makeNoise();
 	public void eat() {
 		System.out.println("eating meat or grass");
 	}

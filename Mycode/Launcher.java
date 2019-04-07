@@ -1,7 +1,9 @@
 package Mycode;
+
+import java.util.Scanner;
 public class Launcher {
 	public static void main(String[] args) {
-		Animal[] animals =new Animal[10];
+		/*Animal[] animals =new Animal[10];
 		
 		animals[0]=new Dog("dog","meat",60,"3503*200","(354,123)");
 		animals[1]=new Wolf("Wolf","meat",80,"650*400","(843,623)");
@@ -53,8 +55,46 @@ public class Launcher {
 		System.out.print("(pet)aiDog: ");
 		((Robodog)aiDog).takeWalk();
 		System.out.println("package!");
+		*/
+
+		int catNum;
+		System.out.println("################### tkae a pet!#####################");
+		String ownerName;
+		Scanner scan = new Scanner(System.in);
+		System.out.println("input");
+		PetOwner owner = new PetOwner(scan.nextLine());
+		System.out.println("펫 분양하기");
+		System.out.println("분양하고 싶으신 종류를 입력해주세요: 1.Dog , 2. Cat , 3. RobotDog");
+		catNum=scan.nextInt();
+		owner.takeAnimal(catNum);
+	
+
+		while(true){
+			System.out.println("하고 싶은 행동을 골라주세요!");
+			System.out.println("1. Pet과 대화하기");
+			System.out.println("2. 산책시키기");
+			System.out.println("3. 동물병원 데려가기");
+			System.out.println("4. 동물 때리기...");
+			int actNum= scan.nextInt();
+			switch(actNum){
+				case 1:
+					owner.talking();
+					break;
+				case 2:
+					owner.takeWalk();
+					break;
+				case 3:
+					owner.takeHospital();
+					break;
+				case 4:
+					owner.hitPet();
+					break;
+				default:
+					System.out.println("다시 입력해주세요");
+			}
+		}
 		
-		
+
 	}
 
 }

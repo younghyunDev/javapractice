@@ -2,6 +2,7 @@ package Mycode2;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.peer.FramePeer;
 
 import javax.swing.*;
 public class Launcher implements ActionListener {
@@ -28,5 +29,10 @@ public class Launcher implements ActionListener {
     public static void main(String[] args){
         Launcher button =new Launcher();
         button.go("Event handling");
+
+        FramePractice framePrac =new FramePractice();
+        framePrac.createFrame();
+
+        new ButtonThree();
     }
 }

@@ -1,10 +1,13 @@
 package Mycode;
 public class Robot {
+	public Robot(){};
 	public Robot(int price, String name) {
 		buyingPrice=price;
 		robotName=name;
 	}
-	int buyingPrice; // ·Îº¿ °¡°Ý
+	int learningLevel=1;
+	int exp=0;
+	int buyingPrice; // 
 	String robotName; 
 	
 	public void introduce() {

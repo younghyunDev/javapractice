@@ -1,9 +1,10 @@
 package Mycode;
 public class Cat extends Feline implements Pet{
 
+	public Cat(){};
 	public Cat(String argPict, String argFood, int argHunger, String argBoundaries, String argLocation) {
 		super(argPict, argFood, argHunger, argBoundaries,argLocation);
-		// TODO Auto-generated constructor stub
+		
 	}
 	public void makeNoise() {
 		System.out.println("meow(cat crying)");
@@ -14,4 +15,8 @@ public class Cat extends Feline implements Pet{
 	public void takeWalk() {
 		System.out.println("Oh no! I don't want to taking a walk");
 	}
+	public void charming(){
+		System.out.println("nyaong~~~");
+	}
+
 }
