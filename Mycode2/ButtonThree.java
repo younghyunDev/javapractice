@@ -1,4 +1,4 @@
-package Mycode2;
+package mycode2;
 import java.awt.*;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -11,14 +11,15 @@ public class ButtonThree extends JFrame
     
     public ButtonThree()
     {
-        super("제목은 여기에!!");
+        super("Subject here");
 
         this.setLayout(new FlowLayout());
 
         this.add(b1);
         this.add(b2);
         this.add(b3);
-
+        
+        
         this.setSize(300,400);
         this.setVisible(true);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

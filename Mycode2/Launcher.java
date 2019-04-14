@@ -1,8 +1,8 @@
-package Mycode2;
+package mycode2;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.peer.FramePeer;
+
 
 import javax.swing.*;
 public class Launcher implements ActionListener {
@@ -26,6 +26,7 @@ public class Launcher implements ActionListener {
     public void actionPerformed(ActionEvent event){
         label.setText(labelPrefix+ ++numClicks);
     }
+    
     public static void main(String[] args){
         Launcher button =new Launcher();
         button.go("Event handling");

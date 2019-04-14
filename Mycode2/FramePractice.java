@@ -1,4 +1,4 @@
-package Mycode2;
+package mycode2;
 import java.awt.*;
 public class FramePractice
 {
