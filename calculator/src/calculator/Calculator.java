@@ -8,7 +8,6 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.math.BigDecimal;
 
-
 @SuppressWarnings("serial") // Warnning ¹«½Ã
 public class Calculator   {
 	JFrame frame =new JFrame();
@@ -136,12 +135,8 @@ public class Calculator   {
                 case "add":
                     inputaddVar();
                     break;
-                case "¡ç":
+                case "¡ç": 
                     inputBackspace();
-                    break;
-
-                case "¡î":
-                    calculateSquareRoot();
                     break;
 
                 case "=":

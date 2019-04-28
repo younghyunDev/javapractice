@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Calculator",
+            "request": "launch",
+            "mainClass": "calculator.Calculator",
+            "projectName": "calculator"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Mycode",
             "request": "launch",
             "mainClass": "Mycode"
