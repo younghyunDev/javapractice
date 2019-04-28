@@ -17,7 +17,7 @@ public class ButtonThree extends JFrame
 
         this.add(b1);
         this.add(b2);
-        this.add(b3);
+        this.a3dd(b3);
         
         
         this.setSize(300,400);
