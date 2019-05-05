@@ -57,3 +57,30 @@
   - GitHub
     * readme파일 수정 및 [git pages](https://younghyundev.github.io/javapractice/) 만들어보기
     
+
+## Week4~6 GUI
+  - Swing
+    > swing은 자바 영역에서 사용하는 look &feel을 적용 받아 모든 운영체제에서 동일한 느낌을 제공한다.
+    * JButton
+    * JFrame
+    * JTextField
+  - 용어정리
+    * Container
+      >JAVA에서 Container는 창의 역할을 한다. 한 개 이상의 Container 위에 Component들이 올려질 영역
+      Container는 실제로 Component 보다 작은 개념이다.
+      (ex) Frame,Window,Panel,Dialog,Applet
+    * Component
+      > 실제로 Container 위에 올려져서 화면 구성을 담당하는 요소들
+      (ex)Button,TextField,TextAread 등등
+    * LayoutManager
+      > Container 위에 Component들을 올릴 때 자리 배치방법
+      (ex) FlowLayout,BorderLayout,GridLatout
+  - Event 처리하기
+    >   1.이벤트를 발생시키는 주체 찾기  
+        2. 이벤트 주체에 해당하는 이벤트 종류 선택하기  
+        3. 이벤트를 등록하기(이벤트주체.add해당Listener(...);)    
+        4. 해당 이벤트를 처리하는 핸들러를 구현한다.
+## Week 7-8 계산기 구현하기
+  [계산기 보러가기](https://github.com/younghyunDev/javapractice/tree/master/calculator)
+    
+     
