@@ -1,5 +1,6 @@
+import java.io.Serializable;
 
-public class Dog extends Canine implements Pet{
+public class Dog extends Canine implements Pet,Serializable{
 
 	public Dog(String argPict, String argFood, int argHunger, String argBoundaries, String argLocation) {
 		super(argPict, argFood, argHunger, argBoundaries,argLocation);
