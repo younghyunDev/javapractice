@@ -1,5 +1,8 @@
 # Javapractice
 
+## week 11 투 버
+- using ubuntu server
+
 ## week 10 파일 입출력
 - Saving object
   > saving: serialization   
