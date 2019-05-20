@@ -1,7 +1,39 @@
 # Javapractice
 
-## week 11 투 버
-- using ubuntu server
+## week 11 install ubuntu gui in server
+- first : install tasksel
+  > sudo apt-get install tasksel
+- second: install mate core on server
+  > sudo apt update
+    sudo apt upgrade
+    sudo tasksel install ubuntu-mate-core
+- third install vnc4server
+  > sudo apt-get install vnc4server
+- fourth activate vncserver
+  > vncserver
+- fifth: modify xstartup as below
+  > vi ~/.vnc/xstartup
+
+      #!/bin/sh   
+      # Uncomment the following two lines for normal desktop:     
+      unset SESSION_MANAGER         ## uncomment
+      exec /etc/X11/xinit/xinitrc   ## uncomment
+
+      [ -x /etc/vnc/xstartup ] && exec /etc/vnc/xstartup
+      [ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
+      xsetroot -solid grey
+      vncconfig -iconic &
+
+      ## commented out following two lines
+      #x-terminal-emulator -geometry 80x24+10+10 -ls -title "$VNCDESKTOP Desktop" &
+      #x-window-manager &
+- sixth: Reboot the instance
+  > sudo reboot
+- seventh: ssh with turnerling option
+  > ssh -L 5901:localhost:5901 -i <filename.pem> ubuntu@\<public ip or DNS>
+- final: activate vncserver
+  > vncserver
+
 
 ## week 10 파일 입출력
 - Saving object
@@ -20,7 +52,10 @@ about the class structure.
    #### Check the serialVersionUID
    > In the directory of the saved object file
      Use “serialver”
-     
+
+### Install vncviewr
+  https://www.realvnc.com/en/connect/download/viewer/
+  
 
 
 

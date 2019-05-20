@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - file",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        
+        
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - fileio",
+            "request": "launch",
+            "mainClass": "fileio"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Calculator",
             "request": "launch",
             "mainClass": "calculator.Calculator",
