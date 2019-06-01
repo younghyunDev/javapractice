@@ -35,6 +35,7 @@ public class Main extends Application {
 		try {
 			serverSocket = new ServerSocket();
 			serverSocket.bind(new InetSocketAddress(IP,port));
+			System.out.println("서버를 시작합니다.");
 		} catch (Exception e) {
 			if(!serverSocket.isClosed()) {
 				stopServer();
@@ -91,8 +92,8 @@ public class Main extends Application {
 	}
 	
 	//UI생성하고,프로그램동장
-	@Override
-	public void start(Stage primaryStage) {
+	//@Override
+	/*public void start(Stage primaryStage) {
 		BorderPane root=new BorderPane();
 		root.setPadding(new Insets(5));
 		
@@ -110,7 +111,7 @@ public class Main extends Application {
 		int port= 9876;
 		toggleButton.setOnAction(event ->{
 			if(toggleButton.getText().equals("시작하기")) {
-				startServer(IP, port);
+				st
 				Platform.runLater(()->{
 					String message=String.format("[서버 시작]\n", IP,port);
 					textArea.appendText(message);
@@ -131,7 +132,14 @@ public class Main extends Application {
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}
+	*/
 	
+	@Override
+	public void start(Stage primaryStage) {
+		String IP="127.0.0.1";
+		int port= 9876;
+		startServer(IP, port);
+	}
 	//프로그램의 진입점
 	public static void main(String[] args) {
 		launch(args);
