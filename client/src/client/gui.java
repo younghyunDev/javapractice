@@ -1,8 +1,10 @@
 package client;
 
+import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.Socket;
@@ -10,50 +12,79 @@ import java.net.Socket;
 import javax.swing.*;
 
 public class gui {
-	JFrame frame=new JFrame("Chating");
-	JButton button ;
-	JTextArea txt= new JTextArea();
+	JTextArea incoming;
+	JTextField outgoing;
+	BufferedReader reader;
+	PrintWriter writer;
 	Socket sock;
-	public void createFrame() {
-		try {
-			sock = new Socket("127.0.0.1",5000);
-			
-			System.out.println(sock);
-			
-			
-	}catch(IOException ex) {
-		ex.printStackTrace();
-	}	
-		sendButton();
-		frame.setLayout(new GridLayout(1,2));
-		frame.add(txt);
-		frame.add(button);
-		frame.setSize(600,100);
+	public void go() {
+		JFrame frame =new JFrame("Simple Chat Client");
+		JPanel mainPanel =new JPanel();
+		incoming=new JTextArea(15,50);
+		incoming.setLineWrap(true);
+		incoming.setWrapStyleWord(true);
+		incoming.setEditable(false);
+		JScrollPane qScroller =new JScrollPane(incoming);
+		qScroller.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+		qScroller.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+		outgoing=new JTextField(20);
+		JButton sendButton=new JButton("send");
+		sendButton.addActionListener(new SendButtonListener());
+		mainPanel.add(qScroller);
+		mainPanel.add(outgoing);
+		mainPanel.add(sendButton);
+		frame.getContentPane().add(BorderLayout.CENTER,mainPanel);
+		setUpNetworking();
+		
+		Thread readerThread=new Thread(new IncomingReader());
+		readerThread.start();
+		
+		frame.setSize(800,500);
 		frame.setVisible(true);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 	
-	private void sendButton() {
-		button = new JButton("send");
-		button.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				PrintWriter writer;
-				try {
-					writer = new PrintWriter(sock.getOutputStream());
-					writer.println(txt.getText());
-					writer.flush();
-					txt.setText(null);
-					
-				} catch (IOException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				
-				
-				
+	private void setUpNetworking() {
+		try {
+			sock=new Socket("127.0.0.1",5000);
+			writer=new PrintWriter(sock.getOutputStream());
+			System.out.println("networking established");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public class SendButtonListener implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			try {
+				writer.println(outgoing.getText());
+				writer.flush();
+			} catch (Exception e2) {
+				e2.printStackTrace();
 			}
-		});
+			outgoing.setText("");
+			outgoing.requestFocus();
+			
+		}
+		
+	}
+	
+	public class IncomingReader implements Runnable{
+		public void run() {
+			String message;
+			try {
+				while((message=reader.readLine()) !=null) {
+					System.out.println("read "+message);
+					incoming.append(message+"\n");
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	public static void main(String[] args) {
+		new gui().go();
 	}
 }

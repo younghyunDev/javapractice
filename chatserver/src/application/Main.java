@@ -1,28 +1,17 @@
 package application;
 	
-import javafx.*;
+//import javafx.*;
 
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Iterator;
 import java.util.Vector;
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import javafx.application.Application;
-import javafx.application.Platform;
-import javafx.geometry.Insets;
-import javafx.stage.Stage;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.text.Font;
 
-
-public class Main extends Application {
+public class Main  {
 	
 	//스레드 관리용  스레드 숫자를 제한한다.
 	public static ExecutorService threadPool;
@@ -34,7 +23,7 @@ public class Main extends Application {
 	public void startServer(String IP,int port) {
 		try {
 			serverSocket = new ServerSocket();
-			serverSocket.bind(new InetSocketAddress(IP,port));
+			serverSocket.bind(new InetSocketAddress(port));
 			System.out.println("서버를 시작합니다.");
 		} catch (Exception e) {
 			if(!serverSocket.isClosed()) {
@@ -42,7 +31,7 @@ public class Main extends Application {
 			}
 			return;
 		}
-		//클라이언트가 접속할 때 까지 계속 기달리는 쓰레드
+		//클라이언트가 접속할 때 까지 계속 기달리는 쓰레드	
 		Runnable thread= new Runnable() {
 			
 			@Override
@@ -134,14 +123,15 @@ public class Main extends Application {
 	}
 	*/
 	
-	@Override
-	public void start(Stage primaryStage) {
+	
+	public void start() {
 		String IP="127.0.0.1";
 		int port= 9876;
 		startServer(IP, port);
 	}
 	//프로그램의 진입점
 	public static void main(String[] args) {
-		launch(args);
+		Main a = new Main();
+		a.start();
 	}
 }
