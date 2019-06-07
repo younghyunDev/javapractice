@@ -45,7 +45,7 @@ public class gui {
 	
 	private void setUpNetworking() {
 		try {
-			sock=new Socket("127.0.0.1",5000);
+			sock=new Socket("172.0.0.1",5000);
 			writer=new PrintWriter(sock.getOutputStream());
 			System.out.println("networking established");
 		} catch (Exception e) {

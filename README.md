@@ -1,6 +1,14 @@
 # Javapractice
+## week 12 ~ 15 :making a Chating program!!
+
+[how to make chating server?](https://github.com/younghyunDev/javapractice/tree/master/chatserver)
+
+[how to make chating client program?](https://github.com/younghyunDev/javapractice/tree/master/chatclient)
+
+
 
 ## week 11 install ubuntu gui in server
+*이 글은 https://github.com/hochae/AWS 참고하여 작성되었습니다!*
 - first : install tasksel
   > sudo apt-get install tasksel
 - second: install mate core on server
