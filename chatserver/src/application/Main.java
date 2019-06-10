@@ -24,7 +24,7 @@ public class Main  {
 		try {
 			serverSocket = new ServerSocket(); //서버용 소켓을 할당한 후 대기를 합니다.
 			serverSocket.bind(new InetSocketAddress(port)); //로컬 IP를 가지고 Port를 연 후 클라이언트 접속을 기다립니다.
-			System.out.println("서버를 시작합니다.");
+			System.out.println("Starting Server.");
 		} catch (Exception e) {
 			if(!serverSocket.isClosed()) {
 				stopServer(); //server가 아직 실행중이면 닫아줍니다.
